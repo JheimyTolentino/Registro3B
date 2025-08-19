@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Evaluación</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Página de inicio de sesión -->
+    <div class="container" id="login-page">
+        <div class="header">
+            <h1>Página</h1>
+        </div>
+        
+        <div class="login-form">
+            <div class="form-group">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" placeholder="Ingresa tu usuario">
+            </div>
+            
+            <div class="form-group">
+                <label for="course">Curso:</label>
+                <select id="course">
+                    <option value="">Selecciona tu curso</option>
+                    <option value="1A">1A</option>
+                    <option value="1B">1B</option>
+                    <option value="1C">1C</option>
+                    <option value="1D">1D</option>
+                    <option value="2A">2A</option>
+                    <option value="2B">2B</option>
+                    <option value="2C">2C</option>
+                    <option value="2D">2D</option>
+                    <option value="3A">3A</option>
+                    <option value="3B">3B</option>
+                    <option value="3C">3C</option>
+                    <option value="3D">3D</option>
+                    <option value="4A">4A</option>
+                    <option value="4B">4B</option>
+                    <option value="4C">4C</option>
+                    <option value="4D">4D</option>
+                    <option value="4E">4E</option>
+                </select>
+                <div class="error-message" id="course-error">
+                    Por favor, selecciona un curso válido
+                </div>
+            </div>
+            
+            <button class="btn" id="login-btn" disabled>Ingresar</button>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 - Todos los derechos reservados</p>
+        </div>
+    </div>
+    
+    <!-- Página de evaluación (inicialmente oculta) -->
+    <div class="container" id="evaluation-page">
+        <div class="header">
+            <h1>Califícanos</h1>
+            <p>¡Valora tu experiencia con nosotros!</p>
+        </div>
+        
+        <div class="evaluation">
+            <h2 class="question">¿QUÉ TE PARECIÓ ESTA EXPERIENCIA?</h2>
+            
+            <div class="rating">
+                <!-- Orden de izquierda a derecha: 1, 2, 3, 4, 5 -->
+                <input type="radio" name="rating" id="star1" value="1">
+                <label for="star1"><i class="fas fa-star"></i></label>
+                
+                <input type="radio" name="rating" id="star2" value="2">
+                <label for="star2"><i class="fas fa-star"></i></label>
+                
+                <input type="radio" name="rating" id="star3" value="3">
+                <label for="star3"><i class="fas fa-star"></i></label>
+                
+                <input type="radio" name="rating" id="star4" value="4">
+                <label for="star4"><i class="fas fa-star"></i></label>
+                
+                <input type="radio" name="rating" id="star5" value="5">
+                <label for="star5"><i class="fas fa-star"></i></label>
+            </div>
+            
+            <div class="rating-value" id="rating-text">Selecciona una calificación</div>
+            <div class="rating-message" id="rating-message"></div>
+            
+            <div class="comments">
+                <textarea placeholder="Comparte tus comentarios adicionales..."></textarea>
+            </div>
+            
+            <div class="buttons">
+                <button class="btn btn-back" id="back-btn">Volver</button>
+                <button class="btn" id="submit-btn">Enviar evaluación</button>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 - Todos los derechos reservados</p>
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
